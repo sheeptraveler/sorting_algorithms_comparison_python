@@ -3,6 +3,7 @@ import matplotlib
 matplotlib.use("TkAgg")
 import matplotlib.pyplot as plt
 import matplotlib.animation as anim
+import algorithms
 
 
 n = int(input("Enter the number of elements:"))
@@ -13,28 +14,28 @@ random.shuffle(array)
 
 if(al==1):
     title = "Bubble Sort"
-    algo = sort_buble(array)
+    algo = algorithms.sort_buble(array)
 elif(al==2):
     title = "Insertion Sort"
-    algo = insertion_sort(array)
+    algo = algorithms.insertion_sort(array)
 elif(al==3):
     title = "Quick Sort"
-    algo = quick_Sort(array,0,n-1)
+    algo = algorithms.quick_Sort(array,0,n-1)
 elif(al==4):
     title="Selection Sort"
-    algo = selection_sort(array)
+    algo = algorithms.selection_sort(array)
 elif (al == 5):
     title = "Merge Sort"
-    algo=merge_sort(array,0,n-1)
+    algo= algorithms.merge_sort(array,0,n-1)
 elif (al == 6):
     title = "Heap Sort"
-    algo = heap_sort(array)
+    algo = algorithms.heap_sort(array)
 elif (al == 7):
     title = "Shell Sort"
-    algo = shell_sort(array)
+    algo = algorithms.shell_sort(array)
 elif (al == 8):
     title = "Count Sort"
-    algo = count_sort(array)
+    algo = algorithms.count_sort(array)
 else:
     print("Please enter a number from list")
 # Initialize fig
