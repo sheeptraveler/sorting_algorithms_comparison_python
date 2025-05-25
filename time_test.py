@@ -9,7 +9,7 @@ algorithms = {
     "Selection": algo.selection_sort,
     "Merge": algo.merge_sort,
     "Heap": algo.heap_sort,
-    "Shell": algo.shell_sort,
+    "Radix": algo.radix_sort,
     "Count": algo.count_sort,
 }
 
@@ -27,6 +27,6 @@ elif  al ==  "Quick":
 else:  
     algorithms[al](array)
 
-files.write(array, output_file='output.out')
+files.write(array)
 
 

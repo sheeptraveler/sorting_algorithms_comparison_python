@@ -30,7 +30,7 @@ def selection_sort(arr):
         for j in range(i+1,len(arr)):
             if(arr[j]<arr[min]):
                 min=j
-            yield arr
+          #  yield arr
         if(min!=i):
             swap(arr,i,min)
     # return arr
@@ -41,10 +41,9 @@ def merge_sort(arr,lb,ub):
         return
     elif(lb<ub):
         mid =(lb+ub)//2
-        yield from merge_sort(arr,lb,mid)
-        yield from merge_sort(arr,mid+1,ub)
-        yield from merge(arr,lb,mid,ub)
-        yield arr
+        merge_sort(arr,lb,mid)
+        merge_sort(arr,mid+1,ub)
+        merge(arr,lb,mid,ub)
 
 def merge(arr,lb,mid,ub):
     new = []
@@ -67,8 +66,8 @@ def merge(arr,lb,mid,ub):
             i+=1
     for i,val in enumerate(new):
         arr[lb+i] = val
-        yield arr
 
+# NOT WORKING ##########################################################################
 def quick_Sort(arr,p,q):
     if(p>=q):
         return
@@ -78,21 +77,18 @@ def quick_Sort(arr,p,q):
         if(arr[i]<piv):
             swap(arr,i,pivindx)
             pivindx+=1
-        yield arr
     swap(arr,q,pivindx)
-    yield arr
 
-    yield from quick_Sort(arr,p,pivindx-1)
-    yield from quick_Sort(arr,pivindx+1,q)
+    quick_Sort(arr,p,pivindx-1)
+    quick_Sort(arr,pivindx+1,q)
 
 def heap_sort(arr):
     n = len(arr)
     for i in range(n,-1,-1):
-        yield from heapify(arr,n,i)
+        heapify(arr,n,i)
     for i in range(n-1,0,-1):
         swap(arr,0,i)
-        yield  arr
-        yield from heapify(arr,i,0)
+        heapify(arr,i,0)
 
 def heapify(arr,n,i):
     largest = i
@@ -104,8 +100,7 @@ def heapify(arr,n,i):
         largest = r
     if(largest!=i):
         swap(arr,i,largest)
-        yield arr
-        yield from heapify(arr,n,largest)
+        heapify(arr,n,largest)
 
 # O(n+k) ou O(nk) ###############################################################################
 def count_sort(arr):
@@ -115,40 +110,62 @@ def count_sort(arr):
 
     for a in arr:
         count[a] += 1
-        yield arr
     i = 0
     for a in range(m):
         for c in range(count[a]):
             arr[i] = a
             i += 1
-            yield arr
-        yield  arr
+
+# Radix Sort
+def countingSort(arr, exp1): 
+  
+    n = len(arr) 
+  
+    # The output array elements that will have sorted arr 
+    output = [0] * (n) 
+  
+    # initialize count array as 0 
+    count = [0] * (10) 
+  
+    # Store count of occurrences in count[] 
+    for i in range(0, n): 
+        index = (arr[i]/exp1) 
+        count[int((index)%10)] += 1
+  
+    # Change count[i] so that count[i] now contains actual 
+    #  position of this digit in output array 
+    for i in range(1,10): 
+        count[i] += count[i-1] 
+  
+    # Build the output array 
+    i = n-1
+    while i>=0: 
+        index = (arr[i]/exp1) 
+        output[ count[ int((index)%10) ] - 1] = arr[i] 
+        count[int((index)%10)] -= 1
+        i -= 1
+  
+    # Copying the output array to arr[], 
+    # so that arr now contains sorted numbers 
+    i = 0
+    for i in range(0,len(arr)): 
+        arr[i] = output[i] 
+
+# Method to do Radix Sort
+def radix_sort(arr):
+
+    # Find the maximum number to know number of digits
+    max1 = max(arr)
+
+    # Do counting sort for every digit. Note that instead
+    # of passing digit number, exp is passed. exp is 10^i
+    # where i is current digit number
+    exp = 1
+    while max1 // exp > 0:
+        countingSort(arr,exp)
+        exp *= 10
 
 
 
-
-
-
-
-def shell_sort(arr):
-    sublistcount = len(arr) // 2
-    while sublistcount > 0:
-      for start_position in range(sublistcount):
-        yield  from gap_InsertionSort(arr, start_position, sublistcount)
-      sublistcount = sublistcount // 2
-
-def gap_InsertionSort(nlist,start,gap):
-    for i in range(start+gap,len(nlist),gap):
-
-        current_value = nlist[i]
-        position = i
-
-        while position>=gap and nlist[position-gap]>current_value:
-            nlist[position]=nlist[position-gap]
-            position = position-gap
-            yield nlist
-
-        nlist[position]=current_value
-        yield nlist
 
 

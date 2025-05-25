@@ -1,4 +1,6 @@
 import sys
+
+
 def read():  
     """
     Reads integers from a file named 'input.txt' and returns them as a list.
@@ -28,8 +30,10 @@ def write(array, output_file='output.out'):
     Writes the sorted array to a file named 'output.out'.
     If the file cannot be created, it prints an error message.
     """
+    default_output_file = './data/'+ str(len(array)) + '/' + output_file
+    
     try:
-        with open(output_file, 'w') as file:
+        with open(default_output_file, 'w') as file:
             for item in array:
                 file.write(str(item) + ' ')
     except IOError:

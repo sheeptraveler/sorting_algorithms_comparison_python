@@ -7,7 +7,8 @@ if len(sys.argv) != 2:
     sys.exit(1)
 
 n = sys.argv[1]
-output_dir = "./data/" + str(n) + "/"
+output_dir = "./data/" + str(n) + "/in/"
+
 if not os.path.exists(output_dir):
     try:
         os.makedirs(output_dir)
