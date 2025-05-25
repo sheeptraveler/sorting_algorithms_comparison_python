@@ -1,4 +1,5 @@
 import sys
+import os
 import random
 
 if len(sys.argv) != 2:
@@ -6,12 +7,18 @@ if len(sys.argv) != 2:
     sys.exit(1)
 
 n = sys.argv[1]
-
+output_dir = "./data/" + str(n) + "/"
+if not os.path.exists(output_dir):
+    try:
+        os.makedirs(output_dir)
+    except OSError as e:
+        print(f"Error creating directory {output_dir}: {e}")
+        sys.exit(1)
 
 array = [i + 1 for i in range(int(n))]
 # Ordered Data Set
 try:
-    dataFileName = str(n) + 'orderedSet.txt'
+    dataFileName = output_dir + str(n) + 'orderedSet.in'
     with open(dataFileName, 'w') as dataFile:
         for i in array:
             dataFile.write(str(i) + ' ')
@@ -21,7 +28,7 @@ except FileNotFoundError:
 
 # Inverted Data Set
 try:
-    dataFileName = str(n) + 'invertedOrderedSet.txt'
+    dataFileName = output_dir + str(n) + 'invertedOrderedSet.in'
     with open(dataFileName, 'w') as dataFile:
         for i in range(len(array), 0, -1):
             dataFile.write(str(i) + ' ')
@@ -32,7 +39,7 @@ except FileNotFoundError:
 # Random Data Set
 try:
     random.shuffle(array)
-    dataFileName = str(n) + 'RandomSet.txt'
+    dataFileName = output_dir + str(n) + 'RandomSet.in'
 
     with open(dataFileName, 'w') as dataFile:
         for i in array:

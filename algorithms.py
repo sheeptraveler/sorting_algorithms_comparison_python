@@ -12,7 +12,7 @@ def sort_buble(arr):
         for j in range(len(arr) - 1 - i):
             if (arr[j] > arr[j + 1]):
                 swap(arr, j, j + 1)
-            yield arr
+    # return arr
 
 def insertion_sort(arr):
     if(len(arr)==1):
@@ -22,7 +22,7 @@ def insertion_sort(arr):
         while(j>0 and arr[j-1]>arr[j]):
             swap(arr,j,j-1)
             j-=1
-            yield arr
+    # return arr
 
 def selection_sort(arr):
     for i in range(len(arr)-1):
@@ -33,7 +33,7 @@ def selection_sort(arr):
             yield arr
         if(min!=i):
             swap(arr,i,min)
-            yield arr
+    # return arr
 
 # O(n logn) #####################################################################################
 def merge_sort(arr,lb,ub):
