@@ -5,8 +5,9 @@ data_sizes=(10000 20000 40000 80000 100000)
     python3 generateDataSet.py $size
   done
     
-algorithms=("Bubble" "Insertion" "Selection" "Merge" "Quick" "Heap" "Counting" "Radix")
 
+#algorithms=("Bubble" "Insertion" "Selection" "Merge" "Quick" "Heap" "Count" "Radix")
+algorithms=("Count")
 orders=("orderedSet" "invertedOrderedSet" "RandomSet")
 
   for algo in "${algorithms[@]}"; do 
