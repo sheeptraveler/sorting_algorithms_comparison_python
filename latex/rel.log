@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.26)  27 MAY 2025 18:48
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.26)  27 MAY 2025 20:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1056,7 +1056,20 @@ File: lstlang1.sty 2024/09/23 1.10c listings language file
 (./base/metadata.tex) (./rel.aux
 Package babel Info: 'portuguese' activates 'portuges' shorthands.
 (babel)             Reported  on input line 11.
- (./content/content.aux))
+ (./content/content.aux
+
+LaTeX Warning: Label `fig:Gráfico Performance Dados Ordenados' multiply define
+d.
+
+
+LaTeX Warning: Label `fig:Gráfico Performance Dados Inversamente Ordenados' mu
+ltiply defined.
+
+
+LaTeX Warning: Label `fig:Gráfico Performance Dados Aleatoriamente Ordenados' 
+multiply defined.
+
+))
 \openout1 = `rel.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 97.
@@ -1077,8 +1090,7 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 97.
 LaTeX Font Info:    ... okay on input line 97.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 97.
 LaTeX Font Info:    ... okay on input line 97.
-
-(/usr/local/texlive/2025/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+ (/usr/local/texlive/2025/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count415
 \scratchdimen=\dimen311
@@ -1195,14 +1207,22 @@ al/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}]
 
 
 Package babel Info: 'portuguese' activates 'portuges' shorthands.
-(babel)             Reported  on input line 128.
+(babel)             Reported  on input line 124.
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.128 \include{content/content}
-                                [1
+l.124 \listoffigures
+                     [1
+
+] (./rel.lof)
+\tf@lof=\write6
+\openout6 = `rel.lof'.
+
+
+
+[2
 
 ]
 \openout2 = `content/content.aux'.
@@ -1211,92 +1231,103 @@ l.128 \include{content/content}
 Cap\'{\i }tulo 1.
 
 
-[2
+[3
 
 
 ]
 Cap\'{\i }tulo 2.
-<images/order_table.png, id=62, 606.265pt x 341.275pt>
+
+
+[4
+
+{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
+
+Cap\'{\i }tulo 3.
+<images/order_table.png, id=135, 606.265pt x 341.275pt>
 File: images/order_table.png Graphic file (type png)
 <use images/order_table.png>
-Package pdftex.def Info: images/order_table.png  used on input line 13.
+Package pdftex.def Info: images/order_table.png  used on input line 36.
 (pdftex.def)             Requested size: 286.80779pt x 161.45116pt.
-<images/all_algo_order.png, id=64, 860.013pt x 498.663pt>
+<images/all_algo_order.png, id=137, 860.013pt x 498.663pt>
 File: images/all_algo_order.png Graphic file (type png)
 <use images/all_algo_order.png>
-Package pdftex.def Info: images/all_algo_order.png  used on input line 18.
+Package pdftex.def Info: images/all_algo_order.png  used on input line 43.
 (pdftex.def)             Requested size: 286.80779pt x 166.30174pt.
-<images/o2_order.png, id=65, 860.013pt x 498.663pt>
+<images/o2_order.png, id=138, 860.013pt x 498.663pt>
 File: images/o2_order.png Graphic file (type png)
 <use images/o2_order.png>
-Package pdftex.def Info: images/o2_order.png  used on input line 23.
+Package pdftex.def Info: images/o2_order.png  used on input line 50.
 (pdftex.def)             Requested size: 286.80779pt x 166.30174pt.
 
 
-[3
+[5
 
  <./images/order_table.png> <./images/all_algo_order.png>]
-<images/o_order.png, id=74, 860.7357pt x 498.663pt>
+<images/o_order.png, id=145, 860.7357pt x 498.663pt>
 File: images/o_order.png Graphic file (type png)
 <use images/o_order.png>
-Package pdftex.def Info: images/o_order.png  used on input line 28.
+Package pdftex.def Info: images/o_order.png  used on input line 57.
 (pdftex.def)             Requested size: 286.80779pt x 166.15718pt.
-<images/invert_table.png, id=75, 606.265pt x 341.275pt>
+<images/invert_table.png, id=146, 606.265pt x 341.275pt>
 File: images/invert_table.png Graphic file (type png)
 <use images/invert_table.png>
-Package pdftex.def Info: images/invert_table.png  used on input line 35.
+Package pdftex.def Info: images/invert_table.png  used on input line 80.
 (pdftex.def)             Requested size: 286.80779pt x 161.45116pt.
-<images/all_algo_inver.png, id=76, 860.013pt x 498.663pt>
+
+
+[6 <./images/o2_order.png> <./images/o_order.png>]
+<images/all_algo_inver.png, id=155, 860.013pt x 498.663pt>
 File: images/all_algo_inver.png Graphic file (type png)
 <use images/all_algo_inver.png>
-Package pdftex.def Info: images/all_algo_inver.png  used on input line 40.
+Package pdftex.def Info: images/all_algo_inver.png  used on input line 87.
 (pdftex.def)             Requested size: 286.80779pt x 166.30174pt.
-
-
-[4 <./images/o2_order.png> <./images/o_order.png> <./images/invert_table.png>]
-<images/o2_inv.png, id=87, 860.013pt x 498.663pt>
+<images/o2_inv.png, id=156, 860.013pt x 498.663pt>
 File: images/o2_inv.png Graphic file (type png)
 <use images/o2_inv.png>
-Package pdftex.def Info: images/o2_inv.png  used on input line 45.
+Package pdftex.def Info: images/o2_inv.png  used on input line 94.
 (pdftex.def)             Requested size: 286.80779pt x 166.30174pt.
-<images/o_inv.png, id=88, 860.7357pt x 498.663pt>
+<images/o_inv.png, id=157, 860.7357pt x 498.663pt>
 File: images/o_inv.png Graphic file (type png)
 <use images/o_inv.png>
-Package pdftex.def Info: images/o_inv.png  used on input line 50.
+Package pdftex.def Info: images/o_inv.png  used on input line 101.
 (pdftex.def)             Requested size: 286.80779pt x 166.15718pt.
-<images/random_table.png, id=89, 597.23125pt x 390.45876pt>
+
+
+[7 <./images/invert_table.png> <./images/all_algo_inver.png> <./images/o2_inv.p
+ng>]
+<images/random_table.png, id=166, 597.23125pt x 390.45876pt>
 File: images/random_table.png Graphic file (type png)
 <use images/random_table.png>
-Package pdftex.def Info: images/random_table.png  used on input line 56.
+Package pdftex.def Info: images/random_table.png  used on input line 124.
 (pdftex.def)             Requested size: 286.80779pt x 187.50743pt.
-
-
-[5 <./images/all_algo_inver.png> <./images/o2_inv.png> <./images/o_inv.png>]
-<images/all_algo_rand.png, id=100, 860.013pt x 498.663pt>
+<images/all_algo_rand.png, id=167, 860.013pt x 498.663pt>
 File: images/all_algo_rand.png Graphic file (type png)
 <use images/all_algo_rand.png>
-Package pdftex.def Info: images/all_algo_rand.png  used on input line 61.
+Package pdftex.def Info: images/all_algo_rand.png  used on input line 131.
 (pdftex.def)             Requested size: 286.80779pt x 166.30174pt.
-<images/o2_random.png, id=101, 860.013pt x 498.663pt>
+
+
+[8 <./images/o_inv.png> <./images/random_table.png>]
+<images/o2_random.png, id=174, 860.013pt x 498.663pt>
 File: images/o2_random.png Graphic file (type png)
 <use images/o2_random.png>
-Package pdftex.def Info: images/o2_random.png  used on input line 66.
+Package pdftex.def Info: images/o2_random.png  used on input line 138.
 (pdftex.def)             Requested size: 286.80779pt x 166.30174pt.
-<images/o_random.png, id=102, 860.7357pt x 498.663pt>
+<images/o_random.png, id=175, 860.7357pt x 498.663pt>
 File: images/o_random.png Graphic file (type png)
 <use images/o_random.png>
-Package pdftex.def Info: images/o_random.png  used on input line 71.
+Package pdftex.def Info: images/o_random.png  used on input line 145.
 (pdftex.def)             Requested size: 286.80779pt x 166.15718pt.
 
 
-[6 <./images/random_table.png> <./images/all_algo_rand.png> <./images/o2_random
-.png>]
+[9 <./images/all_algo_rand.png> <./images/o2_random.png> <./images/o_random.png
+>]
 
-[7 <./images/o_random.png>]
-Cap\'{\i }tulo 3.
+[10]
+Cap\'{\i }tulo 4.
 )
 
-[8
+[11
 
 ] 
 enddocument/afterlastpage (AED): lastpage setting LastPage.
@@ -1307,33 +1338,34 @@ L3 programming layer <2025-01-18>
  ***********
 
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `rel.out' has not changed.
-(rerunfilecheck)             Checksum: CA6B6317258235CE4088D58C5C89393B;1202.
+(rerunfilecheck)             Checksum: B2E39A351783311455396321F8BC2576;2613.
  ) 
 Here is how much of TeX's memory you used:
- 27121 strings out of 473190
- 478723 string characters out of 5715806
- 1132687 words of memory out of 5000000
- 49888 multiletter control sequences out of 15000+600000
- 572727 words of font info for 72 fonts, out of 8000000 for 9000
+ 27170 strings out of 473190
+ 479761 string characters out of 5715806
+ 1134687 words of memory out of 5000000
+ 49920 multiletter control sequences out of 15000+600000
+ 573837 words of font info for 74 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 71i,7n,79p,2541b,588s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 71i,7n,79p,2541b,601s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb>
-</usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></
-usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></us
-r/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx2074.pfb></usr/
-local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb></usr/lo
-cal/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/loca
-l/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/
-texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb></usr/local/te
-xlive/2025/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb></usr/local/texl
-ive/2025/texmf-dist/fonts/type1/public/cm-super/sfti1728.pfb>
-Output written on rel.pdf (9 pages, 891979 bytes).
+</usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></
+usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></us
+r/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/
+local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx2074.pfb></usr/lo
+cal/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb></usr/loca
+l/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/
+texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/te
+xlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb></usr/local/texl
+ive/2025/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb></usr/local/texliv
+e/2025/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb>
+Output written on rel.pdf (12 pages, 929586 bytes).
 PDF statistics:
- 177 PDF objects out of 1000 (max. 8388607)
- 120 compressed objects within 2 object streams
- 29 named destinations out of 1000 (max. 500000)
- 117 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 254 PDF objects out of 1000 (max. 8388607)
+ 191 compressed objects within 2 object streams
+ 40 named destinations out of 1000 (max. 500000)
+ 181 words of extra memory for PDF output out of 10000 (max. 10000000)
 
