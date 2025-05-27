@@ -6,8 +6,7 @@ data_sizes=(10000 20000 40000 80000 100000)
   done
     
 
-#algorithms=("Bubble" "Insertion" "Selection" "Merge" "Quick" "Heap" "Count" "Radix")
-algorithms=("Count")
+algorithms=("Bubble" "Insertion" "Selection" "Merge" "Quick" "Heap" "Count" "Radix")
 orders=("orderedSet" "invertedOrderedSet" "RandomSet")
 
   for algo in "${algorithms[@]}"; do 
