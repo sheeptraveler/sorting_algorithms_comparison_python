@@ -1,0 +1,13 @@
+Bubble 10000 orderedSet Swaps 0 Comparison 49995000 Time 2.4462053775787354
+Bubble 10000 invertedOrderedSet Swaps 49995000 Comparison 49995000 Time 6.243569374084473
+Bubble 10000 RandomSet Swaps 25069967 Comparison 49995000 Time 4.59427547454834
+Bubble 20000 orderedSet Swaps 0 Comparison 199990000 Time 10.407193422317505
+Bubble 20000 invertedOrderedSet Swaps 199990000 Comparison 199990000 Time 25.47790813446045
+Bubble 20000 RandomSet Swaps 100104961 Comparison 199990000 Time 18.45908761024475
+Bubble 40000 orderedSet Swaps 0 Comparison 799980000 Time 41.720630407333374
+Bubble 40000 invertedOrderedSet Swaps 799980000 Comparison 799980000 Time 103.94341158866882
+Bubble 40000 RandomSet Swaps 400317500 Comparison 799980000 Time 74.98791074752808
+Bubble 80000 orderedSet Swaps 0 Comparison 3199960000 Time 180.15862941741943
+Bubble 80000 invertedOrderedSet Swaps 3199960000 Comparison 3199960000 Time 424.5236268043518
+Bubble 80000 RandomSet Swaps 1602066935 Comparison 3199960000 Time 313.32027792930603
+Bubble 100000 orderedSet Swaps 0 Comparison 4999950000 Time 282.43818163871765

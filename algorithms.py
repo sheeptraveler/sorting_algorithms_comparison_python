@@ -1,3 +1,7 @@
+#from memory_profiler import profile
+
+SWAP_COUNT = 0
+COMPARE_COUNT = 0
 
 def swap(A, i, j):
     a = A[j]
@@ -5,33 +9,43 @@ def swap(A, i, j):
     A[i] = a
 
 # O(n²) #########################################################################################
+#@profile
 def sort_buble(arr):
+    global SWAP_COUNT, COMPARE_COUNT
     if (len(arr) == 1):
         return
     for i in range(len(arr) - 1):
         for j in range(len(arr) - 1 - i):
+            COMPARE_COUNT += 1  
             if (arr[j] > arr[j + 1]):
+                SWAP_COUNT += 1
                 swap(arr, j, j + 1)
     # return arr
 
 def insertion_sort(arr):
+    global SWAP_COUNT, COMPARE_COUNT
     if(len(arr)==1):
         return
     for i in range(1,len(arr)):
         j = i
+        COMPARE_COUNT += 1
         while(j>0 and arr[j-1]>arr[j]):
+            SWAP_COUNT += 1
             swap(arr,j,j-1)
             j-=1
     # return arr
 
 def selection_sort(arr):
+    global SWAP_COUNT, COMPARE_COUNT
     for i in range(len(arr)-1):
         min = i
         for j in range(i+1,len(arr)):
+            COMPARE_COUNT += 1
             if(arr[j]<arr[min]):
                 min=j
           #  yield arr
         if(min!=i):
+            SWAP_COUNT += 1
             swap(arr,i,min)
     # return arr
 
@@ -46,10 +60,12 @@ def merge_sort(arr,lb,ub):
         merge(arr,lb,mid,ub)
 
 def merge(arr,lb,mid,ub):
+    global SWAP_COUNT, COMPARE_COUNT
     new = []
     i = lb
     j = mid+1
     while(i<=mid and j<=ub):
+        COMPARE_COUNT += 1
         if(arr[i]<arr[j]):
             new.append(arr[i])
             i+=1
@@ -68,37 +84,52 @@ def merge(arr,lb,mid,ub):
         arr[lb+i] = val
 
 # NOT WORKING ##########################################################################
-def quick_Sort(arr,p,q):
-    if(p>=q):
-        return
-    piv = arr[q]
-    pivindx = p
-    for i in range(p,q):
-        if(arr[i]<piv):
-            swap(arr,i,pivindx)
-            pivindx+=1
-    swap(arr,q,pivindx)
+def partition(array, low, high):
 
-    quick_Sort(arr,p,pivindx-1)
-    quick_Sort(arr,pivindx+1,q)
+    # choose the rightmost element as pivot
+    pivot = array[high]
+
+    # pointer for greater element
+    i = low - 1
+    for j in range(low, high):
+        if array[j] <= pivot:
+            i = i + 1
+            swap(array, i, j)
+            #(array[i], array[j]) = (array[j], array[i])
+    swap(array, i+1, high)
+    #(array[i + 1], array[high]) = (array[high], array[i + 1])
+    return i + 1
+
+
+def quick_Sort(array, low, high):
+    if low < high:
+        pi = partition(array, low, high)
+        quick_Sort(array, low, pi - 1)
+        quick_Sort(array, pi + 1, high)
 
 def heap_sort(arr):
+    global SWAP_COUNT, COMPARE_COUNT
     n = len(arr)
     for i in range(n,-1,-1):
         heapify(arr,n,i)
     for i in range(n-1,0,-1):
+        SWAP_COUNT += 1
         swap(arr,0,i)
         heapify(arr,i,0)
 
 def heapify(arr,n,i):
+    global SWAP_COUNT, COMPARE_COUNT
     largest = i
     l = i*2+1
     r = i*2+2
     while(l<n and arr[l]>arr[largest]):
+        COMPARE_COUNT += 1
         largest = l
     while(r<n and arr[r]>arr[largest]):
+        COMPARE_COUNT += 1
         largest = r
     if(largest!=i):
+        SWAP_COUNT += 1
         swap(arr,i,largest)
         heapify(arr,n,largest)
 

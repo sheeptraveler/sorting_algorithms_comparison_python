@@ -1,17 +1,13 @@
 import sys
 
 
-def read():  
+def read(input = "input.txt") -> list[int]:  
     """
     Reads integers from a file named 'input.txt' and returns them as a list.
     If the file does not exist, it returns an empty list.
     """
-    if len(sys.argv) != 2:
-        print("Usage: python files.py <input_file>")
-        sys.exit(1)
     try:
         array = []
-        input = sys.argv[1]
         with open(input, 'r') as file:
             for line in file:
                 for num in line.split(' '):
@@ -19,7 +15,7 @@ def read():
                         array.append(int(num))
             return array
     except FileNotFoundError:
-        print("File not found. Please ensure 'input.txt' exists.")
+        print(f"File not found. Please ensure {input} exists.")
         return []
     except ValueError:
         print("Invalid data in file. Please ensure all lines contain integers.")
@@ -30,10 +26,8 @@ def write(array, output_file='output.out'):
     Writes the sorted array to a file named 'output.out'.
     If the file cannot be created, it prints an error message.
     """
-    default_output_file = './data/'+ str(len(array)) + '/' + output_file
-    
     try:
-        with open(default_output_file, 'w') as file:
+        with open(output_file, 'w') as file:
             for item in array:
                 file.write(str(item) + ' ')
     except IOError:
