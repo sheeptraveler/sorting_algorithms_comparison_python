@@ -14,3 +14,5 @@
 \contentsline {section}{\numberline {3.3}Resultados para DataSet Aleatoriamente Ordenado}{8}{section.3.3}%
 \contentsline {subsection}{\numberline {3.3.1}Analise para Dados Aleatoriamente Ordenados}{9}{subsection.3.3.1}%
 \contentsline {chapter}{\numberline {4}Conclusões}{11}{chapter.4}%
+\contentsline {chapter}{Appendices}{12}{section*.15}%
+\contentsline {chapter}{\numberline {A}Fonte}{13}{appendix.1.A}%
